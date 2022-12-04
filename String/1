@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    char name[20],game[30];
+    gets(name);
+    gets(game);
+    printf("%s\n",name);
+    int i=0;
+    while(name[i]!='\0')
+    {
+        i++;
+    }
+    printf("Length of name is %d\n",i);
+
+    int n=0,j=0,k=0,flag=0;
+    while(game[n]!='\0')
+    {
+        n++;
+    }
+    while(name[j]!='\0' && game[k]!='\0')
+    {
+        if(name[j]!=game[k])
+        {
+            flag=1;break;
+        }
+        j++;k++;
+    }
+    if(flag==0)
+        printf("Equal");
+    else
+        printf("Unequal");
+
+
+
+
+}
+

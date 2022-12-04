@@ -1,0 +1,17 @@
+#include<stdio.h>
+void traverse(int a[],int n)
+{
+    for(int i=0;i<n;i++)
+    { printf("%d ",a[i]); }
+}
+int main()
+{
+    int arr[100],n;
+    printf("Enter the no. of elements");
+    scanf("%d",&n);
+    printf("Enter the elements");
+    for(int j=0;j<n;j++)
+    {
+        scanf("%d",&arr[j]);}
+    traverse(arr,n);
+}

@@ -1,0 +1,14 @@
+#include<stdio.h>
+void main()
+{
+
+    int x;
+    int *p;
+    x=10;
+    printf("%u\n",&x);
+    p=&x;
+    printf("%d\n",x);
+    printf("%u\n",p);
+    printf("%d\n",*p);
+}
+

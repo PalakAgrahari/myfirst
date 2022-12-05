@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<math.h>
+long long power(long long a,long long b)
+{
+    if(b==0)
+        return 1;
+    return a*power(a,b-1);
+}
+long long nod(long long a)
+{
+    long long c=0;
+    while(a!=0)
+    {
+        int d=a%10;
+        c++;a/=10;
+    }
+    return c;
+}
+long long MidSq(long long key,long long ts)
+{
+    long long a=nod(ts-1);
+    long long b=nod(key);
+    long long c=(2*b-a)/2;
+    long long z= power(10,a);
+    long long x=(key*key)/z;
+    long long ans=x%z;
+    ans=ans%ts;
+    return abs(ans);
+}
+int main()
+{
+    long long key,ts;
+    printf("Enter the table size");
+    scanf("%lld",&ts);
+    printf("Enter the key");
+    scanf("%lld",&key);
+    long long c=MidSq(key,ts);
+    printf("%lld ",c);
+}
